@@ -11,15 +11,52 @@ public class MainMenusControler : MonoBehaviour
         
     }
 
+
+    public GameObject PauseMenuUI;
+    public static bool menuOpen = false;
+
+
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            
+            if (menuOpen)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+
+        }
+
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    void Pause()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        menuOpen = true;
+
+
+    }
+    public void Resume()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false; 
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        menuOpen = false;
     }
 
     public void LevelComplete()
@@ -29,6 +66,6 @@ public class MainMenusControler : MonoBehaviour
 
     public void ExitGame()
     {
-        Application.Quit();
+        Application.Quit(); 
     }
 }
