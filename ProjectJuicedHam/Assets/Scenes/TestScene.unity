@@ -155,7 +155,15 @@ MonoBehaviour:
   size: {x: 10, y: 10}
   startPos: 0
   offset: {x: 20, y: 20}
-  room: {fileID: 5235421878976324633, guid: da2615e67c451c843b9bc9a498a4a67a, type: 3}
+  room:
+  - {fileID: 105117025608154099, guid: 40785b700b22a4e4e99992bfa00263c7, type: 3}
+  - {fileID: 105117025608154099, guid: 1d3994513b9f9ed40aecea99b59d5139, type: 3}
+  - {fileID: 105117025608154099, guid: 023dfcebc7d59fe47970a5b1ca9ec48b, type: 3}
+  - {fileID: 105117025608154099, guid: 405c7e89f54a8c34f82ed1164e76067e, type: 3}
+  - {fileID: 5235421878976324633, guid: da2615e67c451c843b9bc9a498a4a67a, type: 3}
+  - {fileID: 5235421878976324633, guid: a7088b5a65e10ef45a047378b549692e, type: 3}
+  - {fileID: 5235421878976324633, guid: f87c62cfd4728424baba0f4abc225492, type: 3}
+  - {fileID: 5235421878976324633, guid: 0da4c39047d34184c97903ec66cc1921, type: 3}
 --- !u!4 &259524962
 Transform:
   m_ObjectHideFlags: 0
@@ -198,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270806685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 5, z: -5}
+  m_LocalPosition: {x: 5, y: 5, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -479,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f2f89b96f9b354c8c3614281f5e80b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caneraPosition: {fileID: 824085539}
 --- !u!1 &824085538
 GameObject:
   m_ObjectHideFlags: 0

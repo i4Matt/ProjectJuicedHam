@@ -17,7 +17,7 @@ public class DungeonGenerator : MonoBehaviour
     public Vector2 offset;
 
     [Header("References")]
-    public GameObject room;
+    public GameObject[] room;
 
     List<Cell> board;
 
@@ -33,7 +33,7 @@ public class DungeonGenerator : MonoBehaviour
         {
             for (int j = 0; j < size.y; j++)
             {
-                var newRoom = Instantiate(room, new Vector3(i*offset.x, 0, -j*offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
+                var newRoom = Instantiate(room[Random.Range(0,room.Length)], new Vector3(i*offset.x, 0, -j*offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
                 newRoom.UpdateRoom(board[Mathf.FloorToInt(i+j*size.x)].status);
 
                 newRoom.name = "Room (" + i + ", " + j + ")";
